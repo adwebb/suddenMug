@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A2F71CE18A16B8C006B86AB /* DK Crayon Crumble.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71CD18A16B8C006B86AB /* DK Crayon Crumble.ttf */; };
+		5A2F71D018A16C17006B86AB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71CF18A16C17006B86AB /* logo.png */; };
+		5A2F71DC18A18533006B86AB /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71D118A18533006B86AB /* camera.png */; };
+		5A2F71DD18A18533006B86AB /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71D218A18533006B86AB /* comment.png */; };
+		5A2F71DE18A18533006B86AB /* dislike.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71D318A18533006B86AB /* dislike.png */; };
+		5A2F71DF18A18533006B86AB /* feed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71D418A18533006B86AB /* feed.png */; };
+		5A2F71E118A18533006B86AB /* followers.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71D618A18533006B86AB /* followers.png */; };
+		5A2F71E218A18533006B86AB /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71D718A18533006B86AB /* like.png */; };
+		5A2F71E318A18533006B86AB /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71D818A18533006B86AB /* map.png */; };
+		5A2F71E418A18533006B86AB /* mappin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71D918A18533006B86AB /* mappin.png */; };
+		5A2F71E518A18533006B86AB /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71DA18A18533006B86AB /* profile.png */; };
+		5A2F71E618A18533006B86AB /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71DB18A18533006B86AB /* search.png */; };
+		5A2F71E818A18978006B86AB /* followings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71E718A18978006B86AB /* followings.png */; };
 		C22AE53C18A0427E00971615 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AE53B18A0427E00971615 /* Foundation.framework */; };
 		C22AE53E18A0427E00971615 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AE53D18A0427E00971615 /* CoreGraphics.framework */; };
 		C22AE54018A0427E00971615 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AE53F18A0427E00971615 /* UIKit.framework */; };
@@ -27,20 +40,10 @@
 		C22AE57E18A0476200971615 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE57D18A0476200971615 /* User.m */; };
 		C22AE58118A0488B00971615 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE58018A0488B00971615 /* Photo.m */; };
 		C22AE58418A0494700971615 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE58318A0494700971615 /* Comment.m */; };
-		C22AE58718A04B4300971615 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE58618A04B4300971615 /* LoginViewController.m */; };
-		C22AE58918A050F600971615 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE58818A050F600971615 /* camera.png */; };
-		C22AE58B18A0510600971615 /* cloud-upload.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE58A18A0510600971615 /* cloud-upload.png */; };
-		C22AE58D18A0512C00971615 /* home-3.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE58C18A0512C00971615 /* home-3.png */; };
-		C22AE58F18A0517900971615 /* user-4.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE58E18A0517900971615 /* user-4.png */; };
-		C22AE59118A051DB00971615 /* user-4-add.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE59018A051DB00971615 /* user-4-add.png */; };
-		C22AE59318A051E800971615 /* users.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE59218A051E700971615 /* users.png */; };
-		C22AE59518A0522700971615 /* heart-full.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE59418A0522600971615 /* heart-full.png */; };
-		C22AE59718A0525700971615 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE59618A0525700971615 /* pin.png */; };
-		C22AE59918A0527F00971615 /* compose-4.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE59818A0527F00971615 /* compose-4.png */; };
-		C22AE59B18A0531A00971615 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE59A18A0531A00971615 /* search.png */; };
 		C22AE5A018A0625100971615 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE59F18A0625100971615 /* CameraViewController.m */; };
 		C22AE5A318A0661300971615 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE5A118A0661300971615 /* icon.png */; };
 		C22AE5A418A0661300971615 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE5A218A0661300971615 /* icon@2x.png */; };
+		D10227704B934A6E9AA24DD5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBB445860B14C8B8AB8020A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A2F71CD18A16B8C006B86AB /* DK Crayon Crumble.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Crayon Crumble.ttf"; sourceTree = "<group>"; };
+		5A2F71CF18A16C17006B86AB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		5A2F71D118A18533006B86AB /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		5A2F71D218A18533006B86AB /* comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment.png; sourceTree = "<group>"; };
+		5A2F71D318A18533006B86AB /* dislike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dislike.png; sourceTree = "<group>"; };
+		5A2F71D418A18533006B86AB /* feed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feed.png; sourceTree = "<group>"; };
+		5A2F71D618A18533006B86AB /* followers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = followers.png; sourceTree = "<group>"; };
+		5A2F71D718A18533006B86AB /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
+		5A2F71D818A18533006B86AB /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		5A2F71D918A18533006B86AB /* mappin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mappin.png; sourceTree = "<group>"; };
+		5A2F71DA18A18533006B86AB /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		5A2F71DB18A18533006B86AB /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		5A2F71E718A18978006B86AB /* followings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = followings.png; sourceTree = "<group>"; };
+		830F48BF08684495816C4CDA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		AEBB445860B14C8B8AB8020A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22AE53818A0427E00971615 /* SuddenMug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuddenMug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22AE53B18A0427E00971615 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C22AE53D18A0427E00971615 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,18 +103,6 @@
 		C22AE58018A0488B00971615 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		C22AE58218A0494700971615 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		C22AE58318A0494700971615 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
-		C22AE58518A04B4300971615 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		C22AE58618A04B4300971615 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		C22AE58818A050F600971615 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
-		C22AE58A18A0510600971615 /* cloud-upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-upload.png"; sourceTree = "<group>"; };
-		C22AE58C18A0512C00971615 /* home-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-3.png"; sourceTree = "<group>"; };
-		C22AE58E18A0517900971615 /* user-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-4.png"; sourceTree = "<group>"; };
-		C22AE59018A051DB00971615 /* user-4-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-4-add.png"; sourceTree = "<group>"; };
-		C22AE59218A051E700971615 /* users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = users.png; sourceTree = "<group>"; };
-		C22AE59418A0522600971615 /* heart-full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-full.png"; sourceTree = "<group>"; };
-		C22AE59618A0525700971615 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
-		C22AE59818A0527F00971615 /* compose-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose-4.png"; sourceTree = "<group>"; };
-		C22AE59A18A0531A00971615 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		C22AE59E18A0625100971615 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		C22AE59F18A0625100971615 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		C22AE5A118A0661300971615 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 				C22AE53E18A0427E00971615 /* CoreGraphics.framework in Frameworks */,
 				C22AE54018A0427E00971615 /* UIKit.framework in Frameworks */,
 				C22AE53C18A0427E00971615 /* Foundation.framework in Frameworks */,
+				D10227704B934A6E9AA24DD5 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +141,7 @@
 				C22AE56018A0427E00971615 /* SuddenMugTests */,
 				C22AE53A18A0427E00971615 /* Frameworks */,
 				C22AE53918A0427E00971615 /* Products */,
+				830F48BF08684495816C4CDA /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +161,7 @@
 				C22AE53D18A0427E00971615 /* CoreGraphics.framework */,
 				C22AE53F18A0427E00971615 /* UIKit.framework */,
 				C22AE55A18A0427E00971615 /* XCTest.framework */,
+				AEBB445860B14C8B8AB8020A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,8 +188,6 @@
 				C22AE57A18A0467F00971615 /* TabController.m */,
 				C22AE59E18A0625100971615 /* CameraViewController.h */,
 				C22AE59F18A0625100971615 /* CameraViewController.m */,
-				C22AE58518A04B4300971615 /* LoginViewController.h */,
-				C22AE58618A04B4300971615 /* LoginViewController.m */,
 				C22AE55318A0427E00971615 /* Images.xcassets */,
 				C22AE54218A0427E00971615 /* Supporting Files */,
 			);
@@ -190,18 +197,21 @@
 		C22AE54218A0427E00971615 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A2F71D118A18533006B86AB /* camera.png */,
+				5A2F71D218A18533006B86AB /* comment.png */,
+				5A2F71D318A18533006B86AB /* dislike.png */,
+				5A2F71D418A18533006B86AB /* feed.png */,
+				5A2F71D618A18533006B86AB /* followers.png */,
+				5A2F71E718A18978006B86AB /* followings.png */,
+				5A2F71D718A18533006B86AB /* like.png */,
+				5A2F71D818A18533006B86AB /* map.png */,
+				5A2F71D918A18533006B86AB /* mappin.png */,
+				5A2F71DA18A18533006B86AB /* profile.png */,
+				5A2F71DB18A18533006B86AB /* search.png */,
+				5A2F71CF18A16C17006B86AB /* logo.png */,
+				5A2F71CD18A16B8C006B86AB /* DK Crayon Crumble.ttf */,
 				C22AE5A118A0661300971615 /* icon.png */,
 				C22AE5A218A0661300971615 /* icon@2x.png */,
-				C22AE59A18A0531A00971615 /* search.png */,
-				C22AE59818A0527F00971615 /* compose-4.png */,
-				C22AE59618A0525700971615 /* pin.png */,
-				C22AE59418A0522600971615 /* heart-full.png */,
-				C22AE59218A051E700971615 /* users.png */,
-				C22AE59018A051DB00971615 /* user-4-add.png */,
-				C22AE58E18A0517900971615 /* user-4.png */,
-				C22AE58C18A0512C00971615 /* home-3.png */,
-				C22AE58A18A0510600971615 /* cloud-upload.png */,
-				C22AE58818A050F600971615 /* camera.png */,
 				C22AE54318A0427E00971615 /* SuddenMug-Info.plist */,
 				C22AE54418A0427E00971615 /* InfoPlist.strings */,
 				C22AE54718A0427E00971615 /* main.m */,
@@ -235,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C22AE56A18A0427E00971615 /* Build configuration list for PBXNativeTarget "SuddenMug" */;
 			buildPhases = (
+				86652C201C0444E3B65C4268 /* Check Pods Manifest.lock */,
 				C22AE53418A0427E00971615 /* Sources */,
 				C22AE53518A0427E00971615 /* Frameworks */,
 				C22AE53618A0427E00971615 /* Resources */,
+				D5E1F0ABDA9D4413985E1E68 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,20 +317,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C22AE55418A0427E00971615 /* Images.xcassets in Resources */,
-				C22AE58F18A0517900971615 /* user-4.png in Resources */,
+				5A2F71E618A18533006B86AB /* search.png in Resources */,
 				C22AE54618A0427E00971615 /* InfoPlist.strings in Resources */,
-				C22AE58918A050F600971615 /* camera.png in Resources */,
+				5A2F71E418A18533006B86AB /* mappin.png in Resources */,
 				C22AE54F18A0427E00971615 /* Main.storyboard in Resources */,
-				C22AE58D18A0512C00971615 /* home-3.png in Resources */,
-				C22AE59318A051E800971615 /* users.png in Resources */,
-				C22AE59718A0525700971615 /* pin.png in Resources */,
-				C22AE59B18A0531A00971615 /* search.png in Resources */,
-				C22AE58B18A0510600971615 /* cloud-upload.png in Resources */,
-				C22AE59118A051DB00971615 /* user-4-add.png in Resources */,
-				C22AE59518A0522700971615 /* heart-full.png in Resources */,
+				5A2F71D018A16C17006B86AB /* logo.png in Resources */,
+				5A2F71E218A18533006B86AB /* like.png in Resources */,
+				5A2F71DD18A18533006B86AB /* comment.png in Resources */,
+				5A2F71CE18A16B8C006B86AB /* DK Crayon Crumble.ttf in Resources */,
+				5A2F71E818A18978006B86AB /* followings.png in Resources */,
 				C22AE5A318A0661300971615 /* icon.png in Resources */,
-				C22AE59918A0527F00971615 /* compose-4.png in Resources */,
+				5A2F71DE18A18533006B86AB /* dislike.png in Resources */,
+				5A2F71E518A18533006B86AB /* profile.png in Resources */,
+				5A2F71E318A18533006B86AB /* map.png in Resources */,
+				5A2F71DC18A18533006B86AB /* camera.png in Resources */,
+				5A2F71E118A18533006B86AB /* followers.png in Resources */,
 				C22AE5A418A0661300971615 /* icon@2x.png in Resources */,
+				5A2F71DF18A18533006B86AB /* feed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +347,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		86652C201C0444E3B65C4268 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D5E1F0ABDA9D4413985E1E68 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C22AE53418A0427E00971615 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -341,7 +389,6 @@
 				C22AE54C18A0427E00971615 /* AppDelegate.m in Sources */,
 				C22AE58418A0494700971615 /* Comment.m in Sources */,
 				C22AE58118A0488B00971615 /* Photo.m in Sources */,
-				C22AE58718A04B4300971615 /* LoginViewController.m in Sources */,
 				C22AE57518A0463300971615 /* SearchViewController.m in Sources */,
 				C22AE5A018A0625100971615 /* CameraViewController.m in Sources */,
 				C22AE57218A0462B00971615 /* FeedViewController.m in Sources */,
@@ -471,6 +518,7 @@
 		};
 		C22AE56B18A0427E00971615 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 830F48BF08684495816C4CDA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -484,6 +532,7 @@
 		};
 		C22AE56C18A0427E00971615 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 830F48BF08684495816C4CDA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -556,6 +605,7 @@
 				C22AE56C18A0427E00971615 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C22AE56D18A0427E00971615 /* Build configuration list for PBXNativeTarget "SuddenMugTests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +614,7 @@
 				C22AE56F18A0427E00971615 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

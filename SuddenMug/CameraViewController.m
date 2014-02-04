@@ -8,7 +8,12 @@
 
 #import "CameraViewController.h"
 
-@interface CameraViewController ()
+@interface CameraViewController () <UIImagePickerControllerDelegate, UIActionSheetDelegate>
+{
+    __weak IBOutlet UIImageView *reviewImageView;
+    
+    
+}
 
 @end
 
@@ -26,13 +31,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    
 }
 
-- (void)didReceiveMemoryWarning
+-(void)viewDidAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewDidAppear:animated];
+    
+  
 }
+
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    if([item.title isEqualToString:@"Photo"])
+    {
+        UIActionSheet* actionSheet = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Choose from Library", @"Take new photo", nil];
+        
+        [actionSheet showInView:self.view];
+    }
+}
+
 
 @end

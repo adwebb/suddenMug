@@ -10,12 +10,15 @@
 #import "ProfileViewController.h"
 #import "SearchViewController.h"
 #import "FeedViewController.h"
-#import "LoginViewController.h"
+#import "CameraViewController.h"
+#import "Parse/Parse.h"
 
-@interface TabController () <UITabBarDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate>
+@interface TabController () <UITabBarDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 {
+    PFLogInViewController *login;
     User* currentUser;
-    UIImagePickerController* cvc;
+    UIImagePickerController* ipc;
+    CameraViewController* cvc;
 }
 @end
 
@@ -24,13 +27,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-//    if(currentUser == nil)
-//    {
-//        [self performSegueWithIdentifier:@"LoginSegue" sender:self];
-//    }
+    ipc = [UIImagePickerController new];
+    cvc = self.viewControllers[2];
     
-    cvc = [UIImagePickerController new];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    if (![PFUser currentUser]) {
+        login = [PFLogInViewController new];
+        login.delegate = self;
+        login.signUpController.delegate = self;
+        [self presentViewController:login animated:animated completion:nil];
+    }
+}
+
+-(void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
+{
+    [logInController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user
+{
+    [signUpController dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
@@ -39,32 +58,35 @@
     {
         UIActionSheet* actionSheet = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Choose from Library", @"Take new photo", nil];
         [actionSheet showInView:self.view];
+        
     }
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+  
+    
     switch (buttonIndex) {
         case 0:
             if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
             {
-                cvc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-                [self presentViewController:cvc animated:YES completion:nil];
+                ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                [cvc presentViewController:ipc animated:YES completion:nil];
             }
             break;
         case 1:
             if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
             {
-                cvc.sourceType = UIImagePickerControllerSourceTypeCamera;
-                cvc.cameraDevice = UIImagePickerControllerCameraDeviceFront;
-                [self presentViewController:cvc animated:YES completion:nil];
+                ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
+                ipc.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+                [cvc presentViewController:ipc animated:YES completion:nil];
             }
             break;
         default:
             break;
     }
-    
-    
 }
+
+
 
 @end

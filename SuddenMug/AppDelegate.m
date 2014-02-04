@@ -7,12 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "Parse/Parse.h"
+
+#define APPLICATION_ID @"eiG2VPpdo1MNY1jDwqeiNSum3KWisr12TPtO1gNu"
+#define CLIENTKEY @"SFJSmJY04EMlHO97VZOQhwNVQuSPChCgMjGRovdQ"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [Parse setApplicationId:APPLICATION_ID clientKey:CLIENTKEY];
+    
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:[[UITabBarItem appearance] titleTextAttributesForState:UIControlStateNormal]];
+    [attributes setValue:[UIFont fontWithName:@"DKCrayonCrumble" size:12] forKey:NSFontAttributeName];
+    [[UITabBarItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
     return YES;
 }
 							

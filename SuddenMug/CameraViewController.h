@@ -13,4 +13,6 @@
 @interface CameraViewController : UIViewController
 @property Photo* photo;
 @property Comment* initialComment;
+
 @end
+

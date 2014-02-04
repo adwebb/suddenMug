@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TabController.h
 //  SuddenMug
 //
 //  Created by Andrew Webb on 2/3/14.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
-@interface ViewController : UIViewController
+@interface TabController : UITabBarController
 
 @end

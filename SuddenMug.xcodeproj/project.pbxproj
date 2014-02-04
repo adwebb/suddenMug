@@ -14,13 +14,33 @@
 		C22AE54818A0427E00971615 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE54718A0427E00971615 /* main.m */; };
 		C22AE54C18A0427E00971615 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE54B18A0427E00971615 /* AppDelegate.m */; };
 		C22AE54F18A0427E00971615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22AE54D18A0427E00971615 /* Main.storyboard */; };
-		C22AE55218A0427E00971615 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE55118A0427E00971615 /* ViewController.m */; };
 		C22AE55418A0427E00971615 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22AE55318A0427E00971615 /* Images.xcassets */; };
 		C22AE55B18A0427E00971615 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AE55A18A0427E00971615 /* XCTest.framework */; };
 		C22AE55C18A0427E00971615 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AE53B18A0427E00971615 /* Foundation.framework */; };
 		C22AE55D18A0427E00971615 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AE53F18A0427E00971615 /* UIKit.framework */; };
 		C22AE56518A0427E00971615 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C22AE56318A0427E00971615 /* InfoPlist.strings */; };
 		C22AE56718A0427E00971615 /* SuddenMugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE56618A0427E00971615 /* SuddenMugTests.m */; };
+		C22AE57218A0462B00971615 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE57118A0462B00971615 /* FeedViewController.m */; };
+		C22AE57518A0463300971615 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE57418A0463300971615 /* SearchViewController.m */; };
+		C22AE57818A0464000971615 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE57718A0464000971615 /* ProfileViewController.m */; };
+		C22AE57B18A0467F00971615 /* TabController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE57A18A0467F00971615 /* TabController.m */; };
+		C22AE57E18A0476200971615 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE57D18A0476200971615 /* User.m */; };
+		C22AE58118A0488B00971615 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE58018A0488B00971615 /* Photo.m */; };
+		C22AE58418A0494700971615 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE58318A0494700971615 /* Comment.m */; };
+		C22AE58718A04B4300971615 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE58618A04B4300971615 /* LoginViewController.m */; };
+		C22AE58918A050F600971615 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE58818A050F600971615 /* camera.png */; };
+		C22AE58B18A0510600971615 /* cloud-upload.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE58A18A0510600971615 /* cloud-upload.png */; };
+		C22AE58D18A0512C00971615 /* home-3.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE58C18A0512C00971615 /* home-3.png */; };
+		C22AE58F18A0517900971615 /* user-4.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE58E18A0517900971615 /* user-4.png */; };
+		C22AE59118A051DB00971615 /* user-4-add.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE59018A051DB00971615 /* user-4-add.png */; };
+		C22AE59318A051E800971615 /* users.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE59218A051E700971615 /* users.png */; };
+		C22AE59518A0522700971615 /* heart-full.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE59418A0522600971615 /* heart-full.png */; };
+		C22AE59718A0525700971615 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE59618A0525700971615 /* pin.png */; };
+		C22AE59918A0527F00971615 /* compose-4.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE59818A0527F00971615 /* compose-4.png */; };
+		C22AE59B18A0531A00971615 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE59A18A0531A00971615 /* search.png */; };
+		C22AE5A018A0625100971615 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE59F18A0625100971615 /* CameraViewController.m */; };
+		C22AE5A318A0661300971615 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE5A118A0661300971615 /* icon.png */; };
+		C22AE5A418A0661300971615 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE5A218A0661300971615 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +65,42 @@
 		C22AE54A18A0427E00971615 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C22AE54B18A0427E00971615 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C22AE54E18A0427E00971615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C22AE55018A0427E00971615 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C22AE55118A0427E00971615 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C22AE55318A0427E00971615 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C22AE55918A0427E00971615 /* SuddenMugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuddenMugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22AE55A18A0427E00971615 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C22AE56218A0427E00971615 /* SuddenMugTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SuddenMugTests-Info.plist"; sourceTree = "<group>"; };
 		C22AE56418A0427E00971615 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C22AE56618A0427E00971615 /* SuddenMugTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuddenMugTests.m; sourceTree = "<group>"; };
+		C22AE57018A0462B00971615 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		C22AE57118A0462B00971615 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		C22AE57318A0463300971615 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		C22AE57418A0463300971615 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		C22AE57618A0464000971615 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		C22AE57718A0464000971615 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		C22AE57918A0467F00971615 /* TabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabController.h; sourceTree = "<group>"; };
+		C22AE57A18A0467F00971615 /* TabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabController.m; sourceTree = "<group>"; };
+		C22AE57C18A0476200971615 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		C22AE57D18A0476200971615 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		C22AE57F18A0488B00971615 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		C22AE58018A0488B00971615 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		C22AE58218A0494700971615 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		C22AE58318A0494700971615 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		C22AE58518A04B4300971615 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C22AE58618A04B4300971615 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C22AE58818A050F600971615 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		C22AE58A18A0510600971615 /* cloud-upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-upload.png"; sourceTree = "<group>"; };
+		C22AE58C18A0512C00971615 /* home-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-3.png"; sourceTree = "<group>"; };
+		C22AE58E18A0517900971615 /* user-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-4.png"; sourceTree = "<group>"; };
+		C22AE59018A051DB00971615 /* user-4-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-4-add.png"; sourceTree = "<group>"; };
+		C22AE59218A051E700971615 /* users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = users.png; sourceTree = "<group>"; };
+		C22AE59418A0522600971615 /* heart-full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-full.png"; sourceTree = "<group>"; };
+		C22AE59618A0525700971615 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		C22AE59818A0527F00971615 /* compose-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose-4.png"; sourceTree = "<group>"; };
+		C22AE59A18A0531A00971615 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		C22AE59E18A0625100971615 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		C22AE59F18A0625100971615 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		C22AE5A118A0661300971615 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		C22AE5A218A0661300971615 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +163,24 @@
 				C22AE54A18A0427E00971615 /* AppDelegate.h */,
 				C22AE54B18A0427E00971615 /* AppDelegate.m */,
 				C22AE54D18A0427E00971615 /* Main.storyboard */,
-				C22AE55018A0427E00971615 /* ViewController.h */,
-				C22AE55118A0427E00971615 /* ViewController.m */,
+				C22AE57018A0462B00971615 /* FeedViewController.h */,
+				C22AE57118A0462B00971615 /* FeedViewController.m */,
+				C22AE57318A0463300971615 /* SearchViewController.h */,
+				C22AE57418A0463300971615 /* SearchViewController.m */,
+				C22AE57618A0464000971615 /* ProfileViewController.h */,
+				C22AE57718A0464000971615 /* ProfileViewController.m */,
+				C22AE57C18A0476200971615 /* User.h */,
+				C22AE57D18A0476200971615 /* User.m */,
+				C22AE57F18A0488B00971615 /* Photo.h */,
+				C22AE58018A0488B00971615 /* Photo.m */,
+				C22AE58218A0494700971615 /* Comment.h */,
+				C22AE58318A0494700971615 /* Comment.m */,
+				C22AE57918A0467F00971615 /* TabController.h */,
+				C22AE57A18A0467F00971615 /* TabController.m */,
+				C22AE59E18A0625100971615 /* CameraViewController.h */,
+				C22AE59F18A0625100971615 /* CameraViewController.m */,
+				C22AE58518A04B4300971615 /* LoginViewController.h */,
+				C22AE58618A04B4300971615 /* LoginViewController.m */,
 				C22AE55318A0427E00971615 /* Images.xcassets */,
 				C22AE54218A0427E00971615 /* Supporting Files */,
 			);
@@ -126,6 +190,18 @@
 		C22AE54218A0427E00971615 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C22AE5A118A0661300971615 /* icon.png */,
+				C22AE5A218A0661300971615 /* icon@2x.png */,
+				C22AE59A18A0531A00971615 /* search.png */,
+				C22AE59818A0527F00971615 /* compose-4.png */,
+				C22AE59618A0525700971615 /* pin.png */,
+				C22AE59418A0522600971615 /* heart-full.png */,
+				C22AE59218A051E700971615 /* users.png */,
+				C22AE59018A051DB00971615 /* user-4-add.png */,
+				C22AE58E18A0517900971615 /* user-4.png */,
+				C22AE58C18A0512C00971615 /* home-3.png */,
+				C22AE58A18A0510600971615 /* cloud-upload.png */,
+				C22AE58818A050F600971615 /* camera.png */,
 				C22AE54318A0427E00971615 /* SuddenMug-Info.plist */,
 				C22AE54418A0427E00971615 /* InfoPlist.strings */,
 				C22AE54718A0427E00971615 /* main.m */,
@@ -229,8 +305,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C22AE55418A0427E00971615 /* Images.xcassets in Resources */,
+				C22AE58F18A0517900971615 /* user-4.png in Resources */,
 				C22AE54618A0427E00971615 /* InfoPlist.strings in Resources */,
+				C22AE58918A050F600971615 /* camera.png in Resources */,
 				C22AE54F18A0427E00971615 /* Main.storyboard in Resources */,
+				C22AE58D18A0512C00971615 /* home-3.png in Resources */,
+				C22AE59318A051E800971615 /* users.png in Resources */,
+				C22AE59718A0525700971615 /* pin.png in Resources */,
+				C22AE59B18A0531A00971615 /* search.png in Resources */,
+				C22AE58B18A0510600971615 /* cloud-upload.png in Resources */,
+				C22AE59118A051DB00971615 /* user-4-add.png in Resources */,
+				C22AE59518A0522700971615 /* heart-full.png in Resources */,
+				C22AE5A318A0661300971615 /* icon.png in Resources */,
+				C22AE59918A0527F00971615 /* compose-4.png in Resources */,
+				C22AE5A418A0661300971615 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +337,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C22AE55218A0427E00971615 /* ViewController.m in Sources */,
+				C22AE57E18A0476200971615 /* User.m in Sources */,
 				C22AE54C18A0427E00971615 /* AppDelegate.m in Sources */,
+				C22AE58418A0494700971615 /* Comment.m in Sources */,
+				C22AE58118A0488B00971615 /* Photo.m in Sources */,
+				C22AE58718A04B4300971615 /* LoginViewController.m in Sources */,
+				C22AE57518A0463300971615 /* SearchViewController.m in Sources */,
+				C22AE5A018A0625100971615 /* CameraViewController.m in Sources */,
+				C22AE57218A0462B00971615 /* FeedViewController.m in Sources */,
+				C22AE57818A0464000971615 /* ProfileViewController.m in Sources */,
+				C22AE57B18A0467F00971615 /* TabController.m in Sources */,
 				C22AE54818A0427E00971615 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

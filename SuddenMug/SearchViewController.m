@@ -7,25 +7,23 @@
 //
 
 #import "SearchViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface SearchViewController ()
-
+{
+    
+    __weak IBOutlet UIView *containerFeed;
+}
 @end
 
 @implementation SearchViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    containerFeed.layer.cornerRadius = 10;
+    containerFeed.layer.masksToBounds = YES;
 }
 
 @end

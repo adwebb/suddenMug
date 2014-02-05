@@ -5,36 +5,48 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E6082B04-6275-471F-954A-9B77A6428FDE</string>
+	<string>292ED24D-CEA0-4735-BABE-E28A479057D0</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SuddenMug</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B7523EA2-E6FC-416A-843F-3CD92D3CCE19</key>
-		<string>https://github.com/adwebb/suddenMug</string>
+		<key>3288D2A7-3A11-409C-9C07-A3BD29E42A8D</key>
+		<string>https://github.com/adwebb/suddenMug.git</string>
+		<key>4F820D07-14E5-456D-8921-05377D5B5063</key>
+		<string>https://github.com/adwebb/suddenMug.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SuddenMug.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B7523EA2-E6FC-416A-843F-3CD92D3CCE19</key>
+		<key>3288D2A7-3A11-409C-9C07-A3BD29E42A8D</key>
+		<string>../../SuddenMug</string>
+		<key>4F820D07-14E5-456D-8921-05377D5B5063</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/adwebb/suddenMug</string>
+	<string>https://github.com/adwebb/suddenMug.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B7523EA2-E6FC-416A-843F-3CD92D3CCE19</string>
+	<string>4F820D07-14E5-456D-8921-05377D5B5063</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B7523EA2-E6FC-416A-843F-3CD92D3CCE19</string>
+			<string>4F820D07-14E5-456D-8921-05377D5B5063</string>
 			<key>IDESourceControlWCCName</key>
 			<string>suddenMug</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3288D2A7-3A11-409C-9C07-A3BD29E42A8D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SuddenMug</string>
 		</dict>
 	</array>
 </dict>

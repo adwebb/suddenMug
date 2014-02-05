@@ -12,10 +12,12 @@
 #import "FeedViewController.h"
 #import "CameraViewController.h"
 #import "Parse/Parse.h"
+#import "LoginViewController.h"
+#import "RegisterViewController.h"
 
 @interface TabController () <UITabBarDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 {
-    PFLogInViewController *login;
+    LoginViewController *login;
     User* currentUser;
     UIImagePickerController* ipc;
     CameraViewController* cvc;
@@ -35,9 +37,12 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     if (![PFUser currentUser]) {
-        login = [PFLogInViewController new];
+        login = [LoginViewController new];
         login.delegate = self;
         login.signUpController.delegate = self;
+        UIImageView* logo = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo"]];
+        login.logInView.logo = logo;
+        
         [self presentViewController:login animated:animated completion:nil];
     }
 }

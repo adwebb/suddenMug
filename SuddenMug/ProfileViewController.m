@@ -7,25 +7,44 @@
 //
 
 #import "ProfileViewController.h"
+#import "Parse/Parse.h"
 
 @interface ProfileViewController ()
-
+{
+    IBOutlet UIView* profileView;
+    
+    __weak IBOutlet UILabel *userLabel;
+    __weak IBOutlet UILabel *photoCountLabel;
+    __weak IBOutlet UILabel *commentCountLabel;
+    __weak IBOutlet UILabel *likeCountLabel;
+    __weak IBOutlet UILabel *followersCountLabel;
+    __weak IBOutlet UILabel *followingsCountLabel;
+    __weak IBOutlet UIView *containerFeed;
+    IBOutletCollection(UIButton) NSArray *buttons;
+    
+    
+}
 @end
 
 @implementation ProfileViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    profileView.layer.cornerRadius = 10;
+    profileView.layer.masksToBounds = YES;
+    for (UIButton* button in buttons) {
+        if([button isKindOfClass:[UIButton class]])
+        {
+            button.layer.cornerRadius = 10;
+            button.layer.masksToBounds = YES;
+        }
+    }
+    containerFeed.layer.cornerRadius = 10;
+    containerFeed.layer.masksToBounds = YES;
+    userLabel.text = [PFUser currentUser].username;
+    userLabel.font = [UIFont fontWithName:@"DKCrayonCrumble" size:30];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "Parse/Parse.h"
+#import "FeedViewController.h"
 
 @interface ProfileViewController ()
 {
@@ -45,6 +46,9 @@
     containerFeed.layer.masksToBounds = YES;
     userLabel.text = [PFUser currentUser].username;
     userLabel.font = [UIFont fontWithName:@"DKCrayonCrumble" size:30];
+    FeedViewController* fvc = [self.childViewControllers objectAtIndex:0];
+    [fvc setUsersToDisplay:@[[PFUser currentUser]]];
 }
+
 
 @end

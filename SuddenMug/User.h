@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Parse/Parse.h"
 
 @interface User : NSObject
-@property NSString* userName;
+@property PFUser* parseUser;
 @property NSMutableArray* photos;
 @property NSMutableArray* followings;
 @property NSMutableArray* followers;

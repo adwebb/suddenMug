@@ -8,11 +8,13 @@
 
 #import "SearchViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "FeedViewController.h"
 
-@interface SearchViewController ()
+@interface SearchViewController () <UISearchBarDelegate>
 {
     
     __weak IBOutlet UIView *containerFeed;
+    FeedViewController* fvc;
 }
 @end
 
@@ -24,6 +26,17 @@
     
     containerFeed.layer.cornerRadius = 10;
     containerFeed.layer.masksToBounds = YES;
+    fvc = [self.childViewControllers objectAtIndex:0];
+    fvc.usersToDisplay = nil;
+}
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    
+    PFQuery* query = [PFUser query];
+    [query whereKey:@"username" containsString:searchBar.text];
+    [fvc setUsersToDisplay:[query findObjects]];
+    [searchBar resignFirstResponder];
 }
 
 @end

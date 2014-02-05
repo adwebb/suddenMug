@@ -13,6 +13,7 @@
 @interface CameraViewController : UIViewController
 @property Photo* photo;
 @property Comment* initialComment;
-
+-(void)getImageFromLibrary;
+-(void)getImageFromCamera;
 @end
 

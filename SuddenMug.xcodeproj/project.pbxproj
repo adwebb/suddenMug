@@ -69,6 +69,9 @@
 		C285DA1218A1F1F700DCC867 /* purplebg.png in Resources */ = {isa = PBXBuildFile; fileRef = C285DA1018A1F1F700DCC867 /* purplebg.png */; };
 		C285DA1318A1F1F700DCC867 /* purplebg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C285DA1118A1F1F700DCC867 /* purplebg@2x.png */; };
 		C285DA1518A1F6B700DCC867 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = C285DA1418A1F6B700DCC867 /* photo.png */; };
+		C285DA1718A2985F00DCC867 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C285DA1618A2985F00DCC867 /* AssetsLibrary.framework */; };
+		C285DA5E18A2BE4D00DCC867 /* ParentFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C285DA5D18A2BE4D00DCC867 /* ParentFeedViewController.m */; };
+		C285DA6118A2E3A100DCC867 /* PhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C285DA6018A2E3A100DCC867 /* PhotoViewCell.m */; };
 		D10227704B934A6E9AA24DD5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBB445860B14C8B8AB8020A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +164,11 @@
 		C285DA1018A1F1F700DCC867 /* purplebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purplebg.png; sourceTree = "<group>"; };
 		C285DA1118A1F1F700DCC867 /* purplebg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purplebg@2x.png"; sourceTree = "<group>"; };
 		C285DA1418A1F6B700DCC867 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		C285DA1618A2985F00DCC867 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		C285DA5C18A2BE4D00DCC867 /* ParentFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentFeedViewController.h; sourceTree = "<group>"; };
+		C285DA5D18A2BE4D00DCC867 /* ParentFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentFeedViewController.m; sourceTree = "<group>"; };
+		C285DA5F18A2E3A100DCC867 /* PhotoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewCell.h; sourceTree = "<group>"; };
+		C285DA6018A2E3A100DCC867 /* PhotoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C285DA1718A2985F00DCC867 /* AssetsLibrary.framework in Frameworks */,
 				C22AE53E18A0427E00971615 /* CoreGraphics.framework in Frameworks */,
 				C22AE54018A0427E00971615 /* UIKit.framework in Frameworks */,
 				C22AE53C18A0427E00971615 /* Foundation.framework in Frameworks */,
@@ -211,6 +220,7 @@
 		C22AE53A18A0427E00971615 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C285DA1618A2985F00DCC867 /* AssetsLibrary.framework */,
 				C22AE53B18A0427E00971615 /* Foundation.framework */,
 				C22AE53D18A0427E00971615 /* CoreGraphics.framework */,
 				C22AE53F18A0427E00971615 /* UIKit.framework */,
@@ -228,6 +238,8 @@
 				C22AE54D18A0427E00971615 /* Main.storyboard */,
 				C22AE57018A0462B00971615 /* FeedViewController.h */,
 				C22AE57118A0462B00971615 /* FeedViewController.m */,
+				C285DA5F18A2E3A100DCC867 /* PhotoViewCell.h */,
+				C285DA6018A2E3A100DCC867 /* PhotoViewCell.m */,
 				C22AE57318A0463300971615 /* SearchViewController.h */,
 				C22AE57418A0463300971615 /* SearchViewController.m */,
 				C22AE57618A0464000971615 /* ProfileViewController.h */,
@@ -238,14 +250,16 @@
 				C22AE58018A0488B00971615 /* Photo.m */,
 				C22AE58218A0494700971615 /* Comment.h */,
 				C22AE58318A0494700971615 /* Comment.m */,
+				C285DA5C18A2BE4D00DCC867 /* ParentFeedViewController.h */,
+				C285DA5D18A2BE4D00DCC867 /* ParentFeedViewController.m */,
 				C22AE57918A0467F00971615 /* TabController.h */,
 				C22AE57A18A0467F00971615 /* TabController.m */,
 				C285D9FA18A1E69D00DCC867 /* LoginViewController.h */,
 				C285D9FB18A1E69D00DCC867 /* LoginViewController.m */,
 				C22AE59E18A0625100971615 /* CameraViewController.h */,
 				C22AE59F18A0625100971615 /* CameraViewController.m */,
-				C285D9FD18A1E6BA00DCC867 /* RegisterViewController.h */,
 				C285D9FE18A1E6BA00DCC867 /* RegisterViewController.m */,
+				C285D9FD18A1E6BA00DCC867 /* RegisterViewController.h */,
 				C22AE55318A0427E00971615 /* Images.xcassets */,
 				C22AE54218A0427E00971615 /* Supporting Files */,
 			);
@@ -493,6 +507,7 @@
 			files = (
 				C22AE57E18A0476200971615 /* User.m in Sources */,
 				C22AE54C18A0427E00971615 /* AppDelegate.m in Sources */,
+				C285DA5E18A2BE4D00DCC867 /* ParentFeedViewController.m in Sources */,
 				C22AE58418A0494700971615 /* Comment.m in Sources */,
 				C22AE58118A0488B00971615 /* Photo.m in Sources */,
 				C22AE57518A0463300971615 /* SearchViewController.m in Sources */,
@@ -503,6 +518,7 @@
 				C22AE57B18A0467F00971615 /* TabController.m in Sources */,
 				C285D9FC18A1E69D00DCC867 /* LoginViewController.m in Sources */,
 				C22AE54818A0427E00971615 /* main.m in Sources */,
+				C285DA6118A2E3A100DCC867 /* PhotoViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

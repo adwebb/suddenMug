@@ -18,8 +18,6 @@
 @interface TabController () <UITabBarDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 {
     LoginViewController *login;
-    User* currentUser;
-    UIImagePickerController* ipc;
     CameraViewController* cvc;
 }
 @end
@@ -29,7 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    ipc = [UIImagePickerController new];
     cvc = self.viewControllers[2];
     
 }
@@ -69,23 +66,12 @@
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-  
-    
-    switch (buttonIndex) {
+  switch (buttonIndex) {
         case 0:
-            if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
-            {
-                ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-                [cvc presentViewController:ipc animated:YES completion:nil];
-            }
-            break;
+          [cvc getImageFromLibrary];
+          break;
         case 1:
-            if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-            {
-                ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
-                ipc.cameraDevice = UIImagePickerControllerCameraDeviceFront;
-                [cvc presentViewController:ipc animated:YES completion:nil];
-            }
+          [cvc getImageFromCamera];
             break;
         default:
             break;

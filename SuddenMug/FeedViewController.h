@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Parse/Parse.h"
 
-@interface FeedViewController : UIViewController
-@property NSArray* usersToDisplay;
+@interface FeedViewController : PFQueryTableViewController
+@property (nonatomic) NSArray* usersToDisplay;
 @end

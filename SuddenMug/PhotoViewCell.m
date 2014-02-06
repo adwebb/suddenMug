@@ -7,6 +7,7 @@
 //
 
 #import "PhotoViewCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation PhotoViewCell
 {
@@ -27,6 +28,8 @@
     [self.imageView setFrame:self.bounds];
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imageView.clipsToBounds = YES;
+    self.imageView.layer.cornerRadius = 10;
+    self.imageView.layer.masksToBounds = YES;
     
     
     if(!shader)
@@ -36,6 +39,8 @@
     
     shader.alpha = .5;
     shader.backgroundColor = [UIColor blackColor];
+    shader.layer.cornerRadius = 10;
+    shader.layer.masksToBounds = YES;
     [self.contentView insertSubview:shader belowSubview:self.textLabel];
     
     [self.textLabel setFrame:CGRectMake(10, 230, 200, 30.0)];

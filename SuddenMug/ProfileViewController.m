@@ -48,7 +48,61 @@
     userLabel.font = [UIFont fontWithName:@"DKCrayonCrumble" size:30];
     FeedViewController* fvc = [self.childViewControllers objectAtIndex:0];
     [fvc setUsersToDisplay:@[[PFUser currentUser]]];
+    
+    [self queryAll];
 }
 
+-(void)queryAll
+{
+    [self queryFollowers];
+    [self queryFollowing];
+    [self queryLikes];
+    [self queryPhotos];
+    [self queryComments];
+}
+
+-(void)queryFollowers
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Following"];
+    [query whereKey:@"userFollowed" equalTo:[PFUser currentUser][@"username"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        followersCountLabel.text = [NSString stringWithFormat:@"%i",objects.count];
+    }];
+}
+
+-(void)queryFollowing
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Following"];
+    [query whereKey:@"userFollowing" equalTo:[PFUser currentUser][@"username"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        followingsCountLabel.text = [NSString stringWithFormat:@"%i",objects.count];
+    }];
+}
+
+-(void)queryLikes
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Like"];
+    [query whereKey:@"username" equalTo:[PFUser currentUser][@"username"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        likeCountLabel.text = [NSString stringWithFormat:@"%i",objects.count];
+    }];
+}
+
+-(void)queryPhotos
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+    [query whereKey:@"username" equalTo:[PFUser currentUser][@"username"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        photoCountLabel.text = [NSString stringWithFormat:@"%i",objects.count];
+    }];
+}
+-(void)queryComments
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Comment"];
+    [query whereKey:@"author" equalTo:[PFUser currentUser][@"username"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        commentCountLabel.text = [NSString stringWithFormat:@"%i",objects.count];
+    }];
+}
 
 @end

@@ -54,9 +54,13 @@
     {
     if(![commentField.text isEqualToString:@""])
          {
-             image[@"Comment"] = commentField.text;
-             [image saveInBackground];
+             PFObject* newComment = [PFObject objectWithClassName:@"Comment"];
+             [newComment setObject:[PFUser currentUser][@"username"] forKey:@"author"];
+             [newComment setObject:image forKey:@"photo"];
+             [newComment setObject:commentField.text forKey:@"text"];
+             [newComment saveInBackground];
          }
+        [image saveInBackground];
     }else
         {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Post what?" message:@"Select or take a photo first!" delegate:self cancelButtonTitle:@"If you say so..." otherButtonTitles:nil];

@@ -8,6 +8,7 @@
 
 #import "FeedViewController.h"
 #import "PhotoViewCell.h"
+#import "PhotoDetailViewController.h"
 
 @interface FeedViewController ()
 {
@@ -67,11 +68,10 @@
     [formatter setDateStyle:NSDateFormatterShortStyle];
     NSString* uploaded = [formatter stringFromDate:object.createdAt];
  
-    cell.textLabel.text = [NSString stringWithFormat:@"Taken By %@ ",object[@"username"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"Taken By %@ ", object[@"username"]];
     
     cell.detailTextLabel.text = uploaded;
     
-   
     return cell;
 }
 
@@ -79,4 +79,18 @@
 {
     return self.view.frame.size.width;
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSIndexPath*)indexPath
+{
+    PhotoDetailViewController *pvc = segue.destinationViewController;
+    PFObject *photo = [self.objects objectAtIndex:indexPath.row];
+    pvc.photo = photo;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"ShowDetail" sender:indexPath];
+}
+
+
 @end

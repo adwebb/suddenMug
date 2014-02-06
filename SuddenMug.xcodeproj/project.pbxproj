@@ -19,6 +19,7 @@
 		5A2F71E518A18533006B86AB /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71DA18A18533006B86AB /* profile.png */; };
 		5A2F71E618A18533006B86AB /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71DB18A18533006B86AB /* search.png */; };
 		5A2F71E818A18978006B86AB /* followings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F71E718A18978006B86AB /* followings.png */; };
+		5A868D6B18A302AF009B1F8F /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A868D6A18A302AF009B1F8F /* PhotoDetailViewController.m */; };
 		C22AE53C18A0427E00971615 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AE53B18A0427E00971615 /* Foundation.framework */; };
 		C22AE53E18A0427E00971615 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AE53D18A0427E00971615 /* CoreGraphics.framework */; };
 		C22AE54018A0427E00971615 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22AE53F18A0427E00971615 /* UIKit.framework */; };
@@ -36,9 +37,6 @@
 		C22AE57518A0463300971615 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE57418A0463300971615 /* SearchViewController.m */; };
 		C22AE57818A0464000971615 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE57718A0464000971615 /* ProfileViewController.m */; };
 		C22AE57B18A0467F00971615 /* TabController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE57A18A0467F00971615 /* TabController.m */; };
-		C22AE57E18A0476200971615 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE57D18A0476200971615 /* User.m */; };
-		C22AE58118A0488B00971615 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE58018A0488B00971615 /* Photo.m */; };
-		C22AE58418A0494700971615 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE58318A0494700971615 /* Comment.m */; };
 		C22AE5A018A0625100971615 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AE59F18A0625100971615 /* CameraViewController.m */; };
 		C22AE5A318A0661300971615 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE5A118A0661300971615 /* icon.png */; };
 		C22AE5A418A0661300971615 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C22AE5A218A0661300971615 /* icon@2x.png */; };
@@ -98,6 +96,8 @@
 		5A2F71DA18A18533006B86AB /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		5A2F71DB18A18533006B86AB /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		5A2F71E718A18978006B86AB /* followings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = followings.png; sourceTree = "<group>"; };
+		5A868D6918A302AF009B1F8F /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		5A868D6A18A302AF009B1F8F /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
 		830F48BF08684495816C4CDA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AEBB445860B14C8B8AB8020A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22AE53818A0427E00971615 /* SuddenMug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuddenMug.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,12 +125,6 @@
 		C22AE57718A0464000971615 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		C22AE57918A0467F00971615 /* TabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabController.h; sourceTree = "<group>"; };
 		C22AE57A18A0467F00971615 /* TabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabController.m; sourceTree = "<group>"; };
-		C22AE57C18A0476200971615 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		C22AE57D18A0476200971615 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		C22AE57F18A0488B00971615 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
-		C22AE58018A0488B00971615 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
-		C22AE58218A0494700971615 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
-		C22AE58318A0494700971615 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		C22AE59E18A0625100971615 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		C22AE59F18A0625100971615 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		C22AE5A118A0661300971615 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -238,18 +232,14 @@
 				C22AE54D18A0427E00971615 /* Main.storyboard */,
 				C22AE57018A0462B00971615 /* FeedViewController.h */,
 				C22AE57118A0462B00971615 /* FeedViewController.m */,
+				5A868D6918A302AF009B1F8F /* PhotoDetailViewController.h */,
+				5A868D6A18A302AF009B1F8F /* PhotoDetailViewController.m */,
 				C285DA5F18A2E3A100DCC867 /* PhotoViewCell.h */,
 				C285DA6018A2E3A100DCC867 /* PhotoViewCell.m */,
 				C22AE57318A0463300971615 /* SearchViewController.h */,
 				C22AE57418A0463300971615 /* SearchViewController.m */,
 				C22AE57618A0464000971615 /* ProfileViewController.h */,
 				C22AE57718A0464000971615 /* ProfileViewController.m */,
-				C22AE57C18A0476200971615 /* User.h */,
-				C22AE57D18A0476200971615 /* User.m */,
-				C22AE57F18A0488B00971615 /* Photo.h */,
-				C22AE58018A0488B00971615 /* Photo.m */,
-				C22AE58218A0494700971615 /* Comment.h */,
-				C22AE58318A0494700971615 /* Comment.m */,
 				C285DA5C18A2BE4D00DCC867 /* ParentFeedViewController.h */,
 				C285DA5D18A2BE4D00DCC867 /* ParentFeedViewController.m */,
 				C22AE57918A0467F00971615 /* TabController.h */,
@@ -383,6 +373,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Andrew Webb";
 				TargetAttributes = {
+					C22AE53718A0427E00971615 = {
+						DevelopmentTeam = G38QD782AL;
+					};
 					C22AE55818A0427E00971615 = {
 						TestTargetID = C22AE53718A0427E00971615;
 					};
@@ -505,11 +498,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C22AE57E18A0476200971615 /* User.m in Sources */,
 				C22AE54C18A0427E00971615 /* AppDelegate.m in Sources */,
 				C285DA5E18A2BE4D00DCC867 /* ParentFeedViewController.m in Sources */,
-				C22AE58418A0494700971615 /* Comment.m in Sources */,
-				C22AE58118A0488B00971615 /* Photo.m in Sources */,
 				C22AE57518A0463300971615 /* SearchViewController.m in Sources */,
 				C22AE5A018A0625100971615 /* CameraViewController.m in Sources */,
 				C22AE57218A0462B00971615 /* FeedViewController.m in Sources */,
@@ -518,6 +508,7 @@
 				C22AE57B18A0467F00971615 /* TabController.m in Sources */,
 				C285D9FC18A1E69D00DCC867 /* LoginViewController.m in Sources */,
 				C22AE54818A0427E00971615 /* main.m in Sources */,
+				5A868D6B18A302AF009B1F8F /* PhotoDetailViewController.m in Sources */,
 				C285DA6118A2E3A100DCC867 /* PhotoViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,10 +637,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SuddenMug/SuddenMug-Prefix.pch";
 				INFOPLIST_FILE = "SuddenMug/SuddenMug-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -660,10 +654,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SuddenMug/SuddenMug-Prefix.pch";
 				INFOPLIST_FILE = "SuddenMug/SuddenMug-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "User.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface ProfileViewController : UIViewController
-@property User* userToDisplay;
 @end

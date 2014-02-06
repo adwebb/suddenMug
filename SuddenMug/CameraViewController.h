@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Photo.h"
-#import "Comment.h"
 
 @interface CameraViewController : UIViewController
-@property Photo* photo;
-@property Comment* initialComment;
 -(void)getImageFromLibrary;
 -(void)getImageFromCamera;
 @end

@@ -9,6 +9,7 @@
 #import "CameraViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <QuartzCore/QuartzCore.h>
+#import "Parse/Parse.h"
 
 @interface CameraViewController () <UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 {

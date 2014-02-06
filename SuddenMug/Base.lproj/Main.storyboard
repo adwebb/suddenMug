@@ -197,6 +197,36 @@
                                 <rect key="frame" x="20" y="281" width="280" height="259"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentReuseID" textLabel="9t1-Nb-Vjl" detailTextLabel="9k9-UZ-TQK" style="IBUITableViewCellStyleSubtitle" id="uJX-fV-Ftk">
+                                        <rect key="frame" x="0.0" y="22" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uJX-fV-Ftk" id="SHe-iM-ovo">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9t1-Nb-Vjl">
+                                                    <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9k9-UZ-TQK">
+                                                    <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wlo-sn-Hy9" id="m8f-WR-ZUc"/>
+                                    <outlet property="delegate" destination="Wlo-sn-Hy9" id="1NA-bo-tav"/>
+                                </connections>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07o-ux-wea">
                                 <rect key="frame" x="20" y="243" width="223" height="30"/>
@@ -210,6 +240,9 @@
                                 <state key="normal" title="POST">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onPostButtonPressed:" destination="Wlo-sn-Hy9" eventType="touchUpInside" id="WrI-uX-o2h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ro-kZ-YzK">
                                 <rect key="frame" x="249" y="105" width="46" height="42"/>
@@ -249,6 +282,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="znl-v0-fR1"/>
                     <connections>
+                        <outlet property="commentTable" destination="yBC-G6-rUj" id="34e-HK-9YM"/>
                         <outlet property="commentTextField" destination="07o-ux-wea" id="Bc6-T7-ERl"/>
                         <outlet property="followLabel" destination="L2r-Gk-ZWh" id="uEz-0h-53P"/>
                         <outlet property="likeLabel" destination="I99-Yd-Z0g" id="fzr-PK-N1f"/>

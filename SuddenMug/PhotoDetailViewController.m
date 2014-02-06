@@ -8,7 +8,7 @@
 
 #import "PhotoDetailViewController.h"
 
-@interface PhotoDetailViewController ()
+@interface PhotoDetailViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -20,6 +20,9 @@
     __weak IBOutlet UILabel *followLabel;
     __weak IBOutlet UILabel *likeLabel;
     __weak IBOutlet UILabel *posterName;
+    __weak IBOutlet UITableView *commentTable;
+    
+    NSArray *comments;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -39,6 +42,43 @@
 {
     
 }
+- (IBAction)onPostButtonPressed:(id)sender
+{
+    [commentTextField resignFirstResponder];
+    PFObject *newComment = [PFObject objectWithClassName:@"Comment"];
+    [newComment setObject:[PFUser currentUser][@"username"] forKey:@"author"];
+    [newComment setObject:self.photo forKey:@"photo"];
+    [newComment setObject:commentTextField.text forKey:@"text"];
+    
+    [newComment saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [self querySomething];
+    }];
+}
+
+-(void)querySomething
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Comment"];
+    [query whereKey:@"photo" equalTo:self.photo];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        comments = objects;
+        [commentTable reloadData];
+    }];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"commentReuseID"];
+    PFObject *comment = [comments objectAtIndex:indexPath.row];
+    cell.textLabel.text = [comment objectForKey:@"text"];
+    cell.detailTextLabel.text = [comment objectForKey:@"author"];
+    
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return comments.count;
+}
 
 - (IBAction)onDoneButtonPressed:(id)sender
 {
@@ -50,6 +90,7 @@
     [super viewDidLoad];
     thumbnailImageView.file = self.photo[@"image"];
     [thumbnailImageView loadInBackground];
+    [self querySomething];
 }
 
 @end

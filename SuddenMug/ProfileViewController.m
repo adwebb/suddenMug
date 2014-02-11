@@ -9,8 +9,11 @@
 #import "ProfileViewController.h"
 #import "Parse/Parse.h"
 #import "FeedViewController.h"
+#import "TabController.h"
+#import "LoginViewController.h"
+#import "RegisterViewController.h"
 
-@interface ProfileViewController ()
+@interface ProfileViewController ()<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 {
     IBOutlet UIView* profileView;
     
@@ -23,6 +26,7 @@
     __weak IBOutlet UIView *containerFeed;
     IBOutletCollection(UIButton) NSArray *buttons;
     
+    __weak IBOutlet UIButton *signOutButton;
     
 }
 @end
@@ -44,11 +48,21 @@
     }
     containerFeed.layer.cornerRadius = 10;
     containerFeed.layer.masksToBounds = YES;
-    userLabel.text = [PFUser currentUser].username;
+    
+    [signOutButton.titleLabel setFont:[UIFont fontWithName:@"DKCrayonCrumble" size:18]];
+    
     userLabel.font = [UIFont fontWithName:@"DKCrayonCrumble" size:30];
+    
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     FeedViewController* fvc = [self.childViewControllers objectAtIndex:0];
     [fvc setUsersToDisplay:@[[PFUser currentUser]]];
-    
+    [fvc.tableView reloadData];
+    userLabel.text = [PFUser currentUser].username;
     [self queryAll];
 }
 
@@ -66,7 +80,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Following"];
     [query whereKey:@"userFollowed" equalTo:[PFUser currentUser][@"username"]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        followersCountLabel.text = [NSString stringWithFormat:@"%i",objects.count];
+        followersCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)objects.count];
     }];
 }
 
@@ -75,7 +89,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Following"];
     [query whereKey:@"userFollowing" equalTo:[PFUser currentUser][@"username"]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        followingsCountLabel.text = [NSString stringWithFormat:@"%i",objects.count];
+        followingsCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)objects.count];
     }];
 }
 
@@ -84,7 +98,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Like"];
     [query whereKey:@"username" equalTo:[PFUser currentUser][@"username"]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        likeCountLabel.text = [NSString stringWithFormat:@"%i",objects.count];
+        likeCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)objects.count];
     }];
 }
 
@@ -93,7 +107,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     [query whereKey:@"username" equalTo:[PFUser currentUser][@"username"]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        photoCountLabel.text = [NSString stringWithFormat:@"%i",objects.count];
+        photoCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)objects.count];
     }];
 }
 -(void)queryComments
@@ -101,8 +115,36 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Comment"];
     [query whereKey:@"author" equalTo:[PFUser currentUser][@"username"]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        commentCountLabel.text = [NSString stringWithFormat:@"%i",objects.count];
+        commentCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)objects.count];
     }];
+}
+- (IBAction)onSignOutButtonPressed:(id)sender
+{
+    [PFUser logOut];
+    [self login];
+}
+
+-(void)login
+{
+    LoginViewController* login = [LoginViewController new];
+    login.delegate = self;
+    login.signUpController.delegate = self;
+    UIImageView* logo = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo"]];
+    login.logInView.logo = logo;
+    
+    [self presentViewController:login animated:YES completion:nil];
+    
+}
+
+-(void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
+{
+    [self viewWillAppear:YES];
+    [logInController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user
+{
+    [signUpController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

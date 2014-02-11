@@ -21,16 +21,17 @@
 
 - (void)viewDidLoad
 {
-    fvc = [self.childViewControllers objectAtIndex:0];
-    PFQuery* query = [PFUser query];
-    [fvc setUsersToDisplay:[query findObjects]];
-    
     [super viewDidLoad];
 	containerFeed.layer.cornerRadius = 10;
     containerFeed.layer.masksToBounds = YES;
- 
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    fvc = [self.childViewControllers objectAtIndex:0];
+    PFQuery* query = [PFUser query];
+    [fvc setUsersToDisplay:[query findObjects]];
+}
 
 
 @end

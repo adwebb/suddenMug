@@ -45,6 +45,8 @@
     [super viewDidAppear:animated];
     reviewImageView.layer.cornerRadius = 10;
     reviewImageView.layer.masksToBounds = YES;
+    reviewImageView.image = nil;
+    commentField.text = @"";
     
 }
 - (IBAction)onPostButtonPressed:(id)sender
@@ -73,6 +75,7 @@
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
     {
         ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        ipc.allowsEditing = YES;
         [self presentViewController:ipc animated:YES completion:nil];
     }
 }
@@ -83,6 +86,7 @@
     {
         ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
         ipc.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+        ipc.allowsEditing = YES;
         [self presentViewController:ipc animated:YES completion:nil];
     }
 }
@@ -100,30 +104,29 @@
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    NSURL* url = info[UIImagePickerControllerReferenceURL];
     
-    [[ALAssetsLibrary new] assetForURL:url resultBlock:^(ALAsset *asset) {
-        NSUInteger const N = (NSUInteger)asset.defaultRepresentation.size;
-        uint8_t bytes[N];
-        [asset.defaultRepresentation getBytes:bytes fromOffset:0 length:N error:nil];
-        NSData* data = [NSData dataWithBytes:bytes length:N];
+    UIImage* photoImage = info[UIImagePickerControllerEditedImage];
+    CGSize resize = CGSizeMake(280, 280);
+    UIGraphicsBeginImageContextWithOptions(resize, NO, 0.0);
+    [photoImage drawInRect:CGRectMake(0, 0, resize.width, resize.height)];
+    UIImage* resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    NSData* imageData = UIImagePNGRepresentation(resizedImage);
         
+                             
         PFUser* user = [PFUser currentUser];
         [user fetchIfNeeded];
         
         image = [PFObject objectWithClassName:@"Photo"];
-        image[@"image"] = [PFFile fileWithData:data];
+        image[@"image"] = [PFFile fileWithData:imageData];
         image[@"user"] = user;
         image[@"username"] = user[@"username"];
         
-        reviewImageView.image = info[UIImagePickerControllerOriginalImage];
+        reviewImageView.image = info[UIImagePickerControllerEditedImage];
         
         [picker dismissViewControllerAnimated:YES completion:nil];
-        
-        
-    } failureBlock:^(NSError *error) {
-        NSLog(@"Max is a hobbit");
-    }];
+    
 }
 
 @end

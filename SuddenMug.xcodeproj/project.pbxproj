@@ -374,7 +374,7 @@
 				ORGANIZATIONNAME = "Andrew Webb";
 				TargetAttributes = {
 					C22AE53718A0427E00971615 = {
-						DevelopmentTeam = G38QD782AL;
+						DevelopmentTeam = 7B9KKDC3X6;
 					};
 					C22AE55818A0427E00971615 = {
 						TestTargetID = C22AE53718A0427E00971615;
@@ -576,7 +576,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Webb (PJGU837J5M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrew Webb (PJGU837J5M)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -638,7 +639,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrew Webb (PJGU837J5M)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SuddenMug/SuddenMug-Prefix.pch";
 				INFOPLIST_FILE = "SuddenMug/SuddenMug-Info.plist";

@@ -33,15 +33,22 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    if (![PFUser currentUser]) {
-        login = [LoginViewController new];
-        login.delegate = self;
-        login.signUpController.delegate = self;
-        UIImageView* logo = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo"]];
-        login.logInView.logo = logo;
-        
-        [self presentViewController:login animated:animated completion:nil];
+    if (![PFUser currentUser])
+    {
+        [self login];
     }
+}
+
+-(void)login
+{
+    login = [LoginViewController new];
+    login.delegate = self;
+    login.signUpController.delegate = self;
+    UIImageView* logo = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo"]];
+    login.logInView.logo = logo;
+    
+    [self presentViewController:login animated:YES completion:nil];
+
 }
 
 -(void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user

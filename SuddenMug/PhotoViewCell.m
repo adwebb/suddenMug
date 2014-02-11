@@ -46,7 +46,7 @@
     [self.textLabel setFrame:CGRectMake(10, 230, 200, 30.0)];
     [self.textLabel setFont:[UIFont fontWithName:@"DKCrayonCrumble" size:18]];
     [self.textLabel setTextColor:[UIColor whiteColor]];
-    [self.detailTextLabel setFrame:CGRectMake(125, 230, 150, 30)];
+    [self.detailTextLabel setFrame:CGRectMake(125, 250, 150, 30)];
     [self.detailTextLabel setFont:[UIFont fontWithName:@"DKCrayonCrumble" size:18]];
  
     self.detailTextLabel.textColor = [UIColor whiteColor];
